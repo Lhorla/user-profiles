@@ -7,7 +7,6 @@ function About() {
       <nav className="app">
         <Link to="/">Home</Link>
         <Link to="/about">About</Link>
-        <Link to="/features">Features</Link>
         <Link to="/users">Users</Link>
       </nav>
       <main>
