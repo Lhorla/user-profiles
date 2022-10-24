@@ -34,7 +34,6 @@ function Users() {
       <nav>
         <Link to="/">Home</Link>
         <Link to="/about">About</Link>
-        <Link to="/features">Features</Link>
         <Link to="/users">Users</Link>
       </nav>
 
