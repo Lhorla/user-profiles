@@ -1,13 +1,16 @@
 import React from "react";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import "./App.css";
+import { createBrowserRouter, Navigate, RouterProvider } from "react-router-dom";
+import "./styles/App.css";
 
-import Home  from "./components/Home";
-import About  from "./components/About";
-import Users  from "./components/Users";
-import Error from "./components/error";
+import { ErrorBoundary } from "react-error-boundary";
+
+import Home  from "./pages/Home";
+import About  from "./pages/About";
+import Users  from "./pages/Users";
+import Error from "./pages/Error";
 
 function App() {
+
   const router = createBrowserRouter([
     {
       path: "/",
@@ -27,14 +30,32 @@ function App() {
     },
   ]);
 
-  return <RouterProvider router={router} />;
+  const ErrorFallback = (props) => {
+    return (
+      <div>
+        <h1>Something went wrong</h1>
+        <pre>{props.error.message}</pre>
+        <button onClick={props.resetErrorBoundary}>Try again</button>
+      </div>
+    );
+  };
+
+  return (
+    <div className="app">
+      <div>
+        <ErrorBoundary FallbackComponent={ErrorFallback} onReset={() => {Navigate("/")}}>
+        </ErrorBoundary>
+        <RouterProvider router={router} />
+      </div>
+    </div>
+  )
 }
 
 export default App;
 
 
 /* 
-import { ErrorBoundary } from "react-error-boundary";
+
 
   function ErrorFallback({ error, resetErrorBoundary }) {
   return (

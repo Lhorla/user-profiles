@@ -1,0 +1,148 @@
+#root {
+  max-width: 1440px;
+  
+  background-color: rgb(193, 198, 196);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  height: 3rem;
+}
+
+.nav-logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: rgb(220, 227, 224);
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.nav-logo span {
+  color: aquamarine;
+}
+
+.nav-links ul {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links ul li {
+  padding: 0 1rem;
+}
+
+.header-home, .header-about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #000000;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  margin: 2rem 0;
+}
+
+p {
+  font-size: 1.5rem;
+  font-weight: 300;
+  text-align: center;
+}
+
+.nav-active {
+  color: aqua;
+  text-decoration: underline;
+}
+
+.nav-inactive {
+  color: aquamarine;
+  text-decoration: none;
+}
+
+.header-users h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.user-cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.user-container {
+  background-color: aquamarine;
+  border-radius: 10px;
+  margin: 3rem;
+  padding: 2rem;
+}
+
+.user-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.user-profile {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 1rem 0;
+  color: black
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.pagination-item {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
