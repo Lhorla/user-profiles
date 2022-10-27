@@ -31,19 +31,19 @@ function Users() {
     <div>
       <Navbar />
       <main className="header-users">
-        <h1>See list of users</h1>
+        <h1>All Users</h1>
 
         {currentPost.length !== 0 ? (
-          <div className="user-cards">
+          <div className="user-container">
             {currentPost.map((user, index) => {
               return (
-                <div key={index} className="user-container">
+                <div key={index} className="user-card">
                   <div>
-                  <img
-                    src={user.picture.large}
-                    alt="user"
-                    className="user-image"
-                  />
+                    <img
+                      src={user.picture.large}
+                      alt="user"
+                      className="user-image"
+                    />
                   </div>
                   <div className="user-profile">
                     <h3 className="user-name">
