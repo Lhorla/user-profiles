@@ -16,25 +16,53 @@ const Pagination = ({
     setCurrentPage(number);
   };
 
+  const getPageByButton = (e) => {
+    const button = e.target;
+    const number = parseInt(button.innerText);
+    setCurrentPage(number);
+  };
+
   return (
     <div className="pagination">
-      <button className="btn" onClick={() => getPageByButton(currentPage - 1)}>PREV</button>
 
-      {pageNumbers.map((data, index) => {
+      <button
+        className="btn"
+        onClick={getPageByNumber.bind(null, currentPage - 1)}
+      >
+        Previous
+      </button>
+
+      {pageNumbers.map((number) => {
         return (
-          <li
-            className="pagination-item"
-            onClick={() => getPageByNumber(data)}
-            key={index}
+          <button
+            key={number}
+            className="btn"
+            onClick={getPageByButton}
+            style={{
+              backgroundColor: number === currentPage ? "black" : "aquamarine",
+            }}
           >
-            {data}
-          </li>
+            {number}
+          </button>
         );
       })}
 
-      <button className="btn" onClick={() => getPageByButton(currentPage + 1)}>NEXT</button>
+      <button
+        className="btn"
+        onClick={getPageByNumber.bind(null, currentPage + 1)}
+      >
+        Next
+      </button>
+
+      <button
+        className="btn"
+        onClick={getPageByNumber.bind(null, pageNumbers.length)}
+      >
+        Last
+      </button>
     </div>
   );
 };
+
 
 export default Pagination;
