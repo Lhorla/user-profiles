@@ -44,8 +44,8 @@ function App() {
     <div className="app">
       <div>
         <ErrorBoundary FallbackComponent={ErrorFallback} onReset={() => {Navigate("/")}}>
+          <RouterProvider router={router} />  
         </ErrorBoundary>
-        <RouterProvider router={router} />
       </div>
     </div>
   )
