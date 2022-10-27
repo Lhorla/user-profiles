@@ -77,29 +77,37 @@ p {
   text-decoration: none;
 }
 
+.header-users {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #000000;
+  background-color: rgb(193, 198, 196);
+}
+
 .header-users h1 {
   font-size: 2rem;
   font-weight: 700;
   line-height: 1;
   text-align: center;
-  margin: 2rem 0;
 }
 
-.user-cards {
+.user-card {
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 1rem;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
-  width: 100%;
+  margin-bottom: 1rem;
 }
 
-.user-container {
-  background-color: aquamarine;
-  border-radius: 10px;
-  margin: 3rem;
-  padding: 2rem;
-}
+
 
 .user-image {
   width: 100px;
@@ -112,7 +120,8 @@ p {
   font-size: 1.5rem;
   font-weight: bold;
   margin: 1rem 0;
-  color: black
+  color: black;
+  
 }
 
 .pagination {
@@ -145,4 +154,30 @@ p {
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
+}
+
+@media only screen and (max-width: 780px) {
+  .user-card {
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+  }
+
+  .user-image {
+    margin-bottom: 1rem;
+  }
+
+  .user-profile {
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  .user-profile p {
+    font-size: 1rem;
+  }
+
+  .pagination {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
