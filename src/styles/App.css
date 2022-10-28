@@ -1,6 +1,5 @@
 #root {
   max-width: 1440px;
-  
   background-color: rgb(193, 198, 196);
 }
 
@@ -17,6 +16,7 @@
   align-items: center;
   padding: 0 1rem;
   height: 3rem;
+  background-color: rgb(28, 27, 35);
 }
 
 .nav-logo {
@@ -69,7 +69,7 @@ p {
 
 .nav-active {
   color: aqua;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .nav-inactive {
@@ -107,8 +107,6 @@ p {
   margin-bottom: 1rem;
 }
 
-
-
 .user-image {
   width: 100px;
   height: 100px;
@@ -119,22 +117,22 @@ p {
 .user-profile {
   font-size: 1.5rem;
   font-weight: bold;
-  margin: 1rem 0;
+  margin: 2rem 0;
   color: black;
-  
 }
 
 .pagination {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 1rem;
 }
 
 .btn {
-  background-color: #4CAF50;
+  background-color: aquamarine;
   border: none;
   color: white;
-  padding: 15px 32px;
+  padding: 10px 20px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -144,16 +142,36 @@ p {
 }
 
 .pagination-item {
-  background-color: #4CAF50;
+  background-color: aquamarine;
   border: none;
   color: white;
-  padding: 15px 32px;
+  padding: 10px 20px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
+}
+
+.error-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #000000;
+}
+
+.footer {
+  background-color: rgb(28, 27, 35);
+  color: #ffffff;
+  text-align: center;
+}
+
+.footer a {
+  color: #ffffff;
+  text-decoration: none;
 }
 
 @media only screen and (max-width: 780px) {
