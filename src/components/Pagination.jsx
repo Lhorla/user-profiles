@@ -54,12 +54,6 @@ const Pagination = ({
         Next
       </button>
 
-      <button
-        className="btn"
-        onClick={getPageByNumber.bind(null, pageNumbers.length)}
-      >
-        Last
-      </button>
     </div>
   );
 };
