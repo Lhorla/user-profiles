@@ -84,6 +84,7 @@ p {
   align-items: center;
   color: #000000;
   background-color: rgb(193, 198, 196);
+  min-height: 100vh;
 }
 
 .header-users h1 {
