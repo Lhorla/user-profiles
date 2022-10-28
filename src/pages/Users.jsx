@@ -1,6 +1,7 @@
 import React, { useState, useContext, useEffect } from "react";
 import Pagination from "../components/Pagination";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 function Users() {
   const userAPI = "https://randomuser.me/api/?results=50";
@@ -68,6 +69,7 @@ function Users() {
           <h1>Loading...</h1>
         )}
       </main>
+      <Footer />
     </div>
   );
 }
